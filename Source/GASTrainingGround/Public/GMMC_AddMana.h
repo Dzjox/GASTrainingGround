@@ -4,19 +4,20 @@
 
 #include "CoreMinimal.h"
 #include "GameplayModMagnitudeCalculation.h"
-#include "GMMC_ArmorDamage.generated.h"
+#include "GMMC_AddMana.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class GASTRAININGGROUND_API UGMMC_ArmorDamage : public UGameplayModMagnitudeCalculation
+class GASTRAININGGROUND_API UGMMC_AddMana : public UGameplayModMagnitudeCalculation
 {
 	GENERATED_BODY()
 
-	UGMMC_ArmorDamage();
+	UGMMC_AddMana();
 
 	virtual float CalculateBaseMagnitude_Implementation(const FGameplayEffectSpec& Spec) const override;
 	
-	FGameplayEffectAttributeCaptureDefinition ArmorDef;
+	FGameplayEffectAttributeCaptureDefinition ManaDef;
+	FGameplayEffectAttributeCaptureDefinition MaxManaDef;
 };
