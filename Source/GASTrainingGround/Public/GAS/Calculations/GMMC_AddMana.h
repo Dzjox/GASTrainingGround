@@ -20,4 +20,5 @@ class GASTRAININGGROUND_API UGMMC_AddMana : public UGameplayModMagnitudeCalculat
 	
 	FGameplayEffectAttributeCaptureDefinition ManaDef;
 	FGameplayEffectAttributeCaptureDefinition MaxManaDef;
+	
 };

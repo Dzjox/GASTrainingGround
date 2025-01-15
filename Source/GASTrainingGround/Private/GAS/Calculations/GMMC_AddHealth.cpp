@@ -6,13 +6,13 @@
 
 UGMMC_AddHealth::UGMMC_AddHealth()
 {
-	HealthDef.AttributeToCapture = UAttributeSetBase::GetArmorAttribute();
+	HealthDef.AttributeToCapture = UAttributeSetBase::GetHealthAttribute();
 	HealthDef.AttributeSource = EGameplayEffectAttributeCaptureSource::Target;
 	HealthDef.bSnapshot = false;
 	
 	RelevantAttributesToCapture.Add(HealthDef);
 
-	MaxHealthDef.AttributeToCapture = UAttributeSetBase::GetArmorAttribute();
+	MaxHealthDef.AttributeToCapture = UAttributeSetBase::GetMaxHealthAttribute();
 	MaxHealthDef.AttributeSource = EGameplayEffectAttributeCaptureSource::Target;
 	MaxHealthDef.bSnapshot = false;
 	

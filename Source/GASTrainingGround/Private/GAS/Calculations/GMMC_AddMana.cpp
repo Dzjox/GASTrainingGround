@@ -1,19 +1,18 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "GMMC_AddMana.h"
-
+#include "GAS/Calculations/GMMC_AddMana.h"
 #include "GAS/Attributes/AttributeSetBase.h"
 
 UGMMC_AddMana::UGMMC_AddMana()
 {
-	ManaDef.AttributeToCapture = UAttributeSetBase::GetArmorAttribute();
+	ManaDef.AttributeToCapture = UAttributeSetBase::GetManaAttribute();
 	ManaDef.AttributeSource = EGameplayEffectAttributeCaptureSource::Target;
 	ManaDef.bSnapshot = false;
 	
 	RelevantAttributesToCapture.Add(ManaDef);
 
-	MaxManaDef.AttributeToCapture = UAttributeSetBase::GetArmorAttribute();
+	MaxManaDef.AttributeToCapture = UAttributeSetBase::GetMaxManaAttribute();
 	MaxManaDef.AttributeSource = EGameplayEffectAttributeCaptureSource::Target;
 	MaxManaDef.bSnapshot = false;
 	
